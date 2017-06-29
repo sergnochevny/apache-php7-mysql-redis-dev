@@ -16,7 +16,13 @@ RUN apt-get install -y pkg-config \
 		curl \
 		sudo \
 		openssl \
+		net-tools \
 		openssh-client \
+		openssh-server \
+		openssh-sftp-server \
+		openssh-blacklist \
+		openssh-blacklist-extra \
+		openssh-known-hosts \
 		git \
 		bash \
 		zsh \
@@ -51,6 +57,7 @@ RUN apt-get install -y pkg-config \
 		libmcrypt-dev \
 		libpng12-dev \
 		cron \
+		nano \
 		supervisor
 
 # Fetch payload
