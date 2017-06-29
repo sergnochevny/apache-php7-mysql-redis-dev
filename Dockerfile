@@ -129,7 +129,7 @@ RUN set -x \
 	&& dpkg -i mod-pagespeed-*.deb \
 	&& apt-get -f install
 
-COPY pagespeed.conf /etc/apache2/mods-available/pagespeed.conf
+COPY payload/pagespeed.conf /etc/apache2/mods-available/pagespeed.conf
 
 #timezonedb
 
@@ -293,7 +293,7 @@ RUN phpenmod pdo_mysql \
 	&& phpenmod zip \
 	&& phpenmod xsl 
     
-COPY init.sh /root/init.sh
+COPY payload/init.sh /root/init.sh
     
 ENV APACHE_RUN_USER    www-data
 ENV APACHE_RUN_GROUP   www-data
