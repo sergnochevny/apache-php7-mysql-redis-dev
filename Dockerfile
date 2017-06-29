@@ -293,8 +293,6 @@ RUN phpenmod pdo_mysql \
 	&& phpenmod zip \
 	&& phpenmod xsl 
     
-COPY payload/init.sh /root/init.sh
-    
 ENV APACHE_RUN_USER    www-data
 ENV APACHE_RUN_GROUP   www-data
 ENV APACHE_PID_FILE    /var/run/apache2.pid
@@ -317,9 +315,14 @@ VOLUME ["/root/dev-env"]
 
 EXPOSE 80 22
 
-RUN sed -i -e 's/\r$//' "/root/init.sh"
+COPY payload/init.sh /usr/bin/init.sh
+RUN set -x \
+    && chown root:root /usr/bin/init.sh \
+    && chmod +x /usr/bin/init.sh
 
-CMD [ "/root/init.sh" ]
+RUN sed -i -e 's/\r$//' "/usr/bin/init.sh"
+
+CMD [ "/usr/bin/init.sh" ]
 
 
 
