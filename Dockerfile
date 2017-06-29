@@ -57,7 +57,6 @@ RUN apt-get install -y pkg-config \
 		libmcrypt-dev \
 		libpng12-dev \
 		cron \
-		nano \
 		supervisor
 
 # Fetch payload
