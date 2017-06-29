@@ -51,6 +51,7 @@ RUN apt-get install -y pkg-config \
 		libmcrypt-dev \
 		libpng12-dev \
 		cron \
+		vim \
 		supervisor
 
 # Fetch payload
