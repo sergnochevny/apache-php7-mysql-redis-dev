@@ -52,6 +52,7 @@ RUN apt-get install -y pkg-config \
 		libpng12-dev \
 		cron \
 		vim \
+		nano \
 		supervisor
 
 # Fetch payload
