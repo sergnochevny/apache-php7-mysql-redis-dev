@@ -312,13 +312,13 @@ ENV LANG               C
 # Run scripts
 
 RUN set -x \
-	&& systemctl disable mysql \
+#	&& systemctl disable mysql \
 	&& systemctl disable redis \
 	&& systemctl disable cron \
 	&& systemctl enable supervisor
 
 VOLUME ["/var/www"]
-VOLUME ["/var/lib/mysql"]
+# VOLUME ["/var/lib/mysql"]
 VOLUME ["/root/dev-env"]
 
 EXPOSE 80 22 443
