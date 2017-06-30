@@ -321,7 +321,7 @@ VOLUME ["/var/www"]
 VOLUME ["/var/lib/mysql"]
 VOLUME ["/root/dev-env"]
 
-EXPOSE 80 22
+EXPOSE 80 22 443
 
 COPY payload/init.sh /usr/bin/init.sh
 RUN set -x \
