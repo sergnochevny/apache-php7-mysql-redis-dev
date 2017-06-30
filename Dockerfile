@@ -17,7 +17,7 @@ RUN apt-get install -y pkg-config \
 		sudo \
 		openssl \
 		net-tools \
-		iputils-ping
+		iputils-ping \
 		openssh-client \
 		openssh-server \
 		openssh-sftp-server \
