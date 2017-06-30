@@ -299,7 +299,7 @@ RUN phpenmod pdo_mysql \
 	&& phpenmod xdebug \
 	&& phpenmod zip \
 	&& phpenmod xsl 
-    
+
 ENV APACHE_RUN_USER    www-data
 ENV APACHE_RUN_GROUP   www-data
 ENV APACHE_PID_FILE    /var/run/apache2.pid
