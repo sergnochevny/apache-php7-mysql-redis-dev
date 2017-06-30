@@ -303,6 +303,8 @@ RUN phpenmod pdo_mysql \
 
 ENV APACHE_RUN_USER    root
 ENV APACHE_RUN_GROUP   root
+ENV MYSQL_RUN_USER    root
+ENV MYSQL_RUN_GROUP   root
 ENV APACHE_PID_FILE    /var/run/apache2.pid
 ENV APACHE_RUN_DIR     /var/run/apache2
 ENV APACHE_LOCK_DIR    /var/lock/apache2
