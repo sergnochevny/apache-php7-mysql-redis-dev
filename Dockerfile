@@ -143,7 +143,7 @@ COPY payload/pagespeed.conf /etc/apache2/mods-available/pagespeed.conf
 
 RUN pecl update-channels \
 	&& pecl install timezonedb \
-    && echo "zend_extension = timezonedb.so" >> /etc/php/7.0/mods-available/timezonedb.ini 
+    && echo "extension = timezonedb.so" >> /etc/php/7.0/mods-available/timezonedb.ini
 
 # Xdebug
 
@@ -178,7 +178,7 @@ RUN set -x \
     && tar -xvzf PDFlib-9.1.0-Linux-x86_64-php.tar.gz \
     && cp PDFlib-9.1.0-Linux-x86_64-php/bind/php/php-700/php_pdflib.so /usr/lib/php/ \
     && echo "" >> /etc/php/7.0/mods-available/pdflib.ini \
-    && echo "zend_extension = /usr/lib/php/php_pdflib.so" >> /etc/php/7.0/mods-available/pdflib.ini \
+    && echo "extension = /usr/lib/php/php_pdflib.so" >> /etc/php/7.0/mods-available/pdflib.ini \
     && cd ..
 
 # Composer

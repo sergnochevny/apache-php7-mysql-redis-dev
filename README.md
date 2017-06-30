@@ -3,6 +3,8 @@ Base Docker image for development environments using Apache, PHP7, MySQL and Red
 
 # Environment
 
++ ubuntu1 16.04 LTS
+
 + php 7.0 + extensions:
     pdo_mysql, mbstring, mcrypt, bz2, curl, exif, fileinfo, gd, gettext,
     imap, imagick, intl, mysqli, redis, soap, sockets, simplexml, tidy,
