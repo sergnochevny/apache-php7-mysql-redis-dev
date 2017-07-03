@@ -1,0 +1,1 @@
+FROM sergnochevny/apache-php7-mysql-redis-dev

@@ -24,3 +24,14 @@ Base Docker image for development environments using Apache, PHP7, MySQL and Red
 + mysql 5.6
 
 + redis
+
+# Build & Run
+
+{override test.loc & test on own project name4}
+
+bash build.sh demo
+bash run.sh demo demo demo.loc d:\OpenServer\domains\projects\apache-php7-mysql-redis-dev\demo\payload d:\OpenServer\domains\projects\apache-php7-mysql-redis-dev\demo\www
+
+run bash run.sh for usage format
+
+docker exec -i -t demo /bin/bash
